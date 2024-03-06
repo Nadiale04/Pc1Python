@@ -1,9 +1,12 @@
 horaingresada=input('Ingrese la hora: ')
 hora_minutos=horaingresada.split(':')
 hora=float(hora_minutos[0])
-if hora>=7 and hora<=8:
+minutos=float(hora_minutos[1])
+minutos=minutos/60
+horatotal=hora+minutos #Para interpretarlo como decimal
+if horatotal>=7 and horatotal<=8:
     print('¡Es hora del desayuno!') 
-elif hora>=12 and hora<=13:
+elif horatotal>=12 and horatotal<=13:
     print('¡Es hora del almuerzo!')
-elif hora>=18 and hora<=19:
+elif horatotal>=18 and horatotal<=19:
     print('¡Es hora de la cena!')
